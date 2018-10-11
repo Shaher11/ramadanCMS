@@ -20,6 +20,8 @@ Route::auth();
 Route::get('/home', 'HomeController@index');
 
 
+Route::resource('admin/users','AdminUsersController');
+
 Route::get('/admin',function(){
 
 
@@ -27,4 +29,4 @@ Route::get('/admin',function(){
 
 });
 
-Route::resource('admin/users','AdminUsersController');
+
