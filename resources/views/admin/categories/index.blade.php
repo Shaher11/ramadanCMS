@@ -1,16 +1,30 @@
 @extends('layouts.admin')
 
 
-
-
-
 @section('content')
+
+
+    {{-- The updating & Deleting messages --}}
+
+    @if(Session::has('updated_category'))
+
+        <p class="bg-success">{{session('updated_category')}}</p>
+
+    @endif
+
+    @if(Session::has('deleted_category'))
+
+        <p class="bg-danger">{{session('deleted_category')}}</p>
+
+    @endif
+
+    {{-- End messages --}}
 
 
     <h1>Categories</h1>
 
 
-    <div class="col-sm-6">
+    <div class="col-sm-4">
 
         {!! Form::open(['method'=>'POST', 'action'=> 'AdminCategoriesController@store']) !!}
              <div class="form-group">
@@ -23,14 +37,12 @@
              </div>
         {!! Form::close() !!}
 
-
-
     </div>
 
+    <div class="col-sm-1"></div>
 
 
-
-    <div class="col-sm-6">
+    <div class="col-sm-7">
 
 
         @if($categories)

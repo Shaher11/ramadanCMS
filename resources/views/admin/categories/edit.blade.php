@@ -19,16 +19,18 @@
         </div>
 
         <div class="form-group">
-            {!! Form::submit('Update Category', ['class'=>'btn btn-primary col-sm-6 ']) !!}
+            {!! Form::submit('Update Category', ['class'=>'btn btn-primary col-sm-3 ']) !!}
         </div>
         {!! Form::close() !!}
+
+        <div class="col-sm-1 "></div>
 
 
         {!! Form::open(['method'=>'DELETE', 'action'=> ['AdminCategoriesController@destroy', $category->id]]) !!}
 
 
         <div class="form-group">
-            {!! Form::submit('Delete Category', ['class'=>'btn btn-danger col-sm-6']) !!}
+            {!! Form::submit('Delete Category', ['class'=>'btn btn-danger col-sm-3']) !!}
         </div>
         {!! Form::close() !!}
 
