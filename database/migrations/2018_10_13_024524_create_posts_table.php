@@ -23,6 +23,10 @@ class CreatePostsTable extends Migration
             $table->timestamps();
 
 
+          // constrains bw users and posts table
+//            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+
+
         });
     }
 
